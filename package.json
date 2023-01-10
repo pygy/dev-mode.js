@@ -1,5 +1,5 @@
 {
-  "name": "dev-mode",
+  "name": "@pygy/dev-mode",
   "type": "module",
   "version": "1.0.0",
   "description": "dev-mode/production micro-module",
@@ -8,5 +8,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pierre-Yves Gérardy",
-  "license": "ISC"
+  "license": "ISC",
+  "module": "./dev-mode.js",
+  "exports": {
+    ".": {
+      "import": "./dev-mode.js"
+    },
+    "./production": {
+      "import": "./production.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pygy/dev-mode.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pygy/dev-mode.js/issues"
+  },
+  "homepage": "https://github.com/pygy/dev-mode.js"
 }

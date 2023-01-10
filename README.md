@@ -5,7 +5,7 @@ A pair of `devMode`/`production` booleans, and matching setters.
 ## usage
 
 ```JS
-import {devMode, production} from "dev-mode"
+import {devMode, production} from "@pygy/dev-mode"
 
 if (devMode) {
     // extra checks go here
@@ -19,7 +19,7 @@ if (production) {
 You can dynamically change the values using
 
 ```JS
-import {setDevMode, setProduction, devMode, production} from "dev-mode"
+import {setDevMode, setProduction, devMode, production} from "@pygy/dev-mode"
 
 // in a default env:
 console.log(devMode, production) // true, false
@@ -36,10 +36,10 @@ console.log(devMode, production) // true, false
 
 In Node.js, these values will be swapped when `NODE_ENV=production`.
 
-For your client-side production builds, you can statically replace `dev-mode` with `dev-mode/production` in your bundler parameters. That file statically sets the booleans in a way that lets minifiers statically remove the dev code. With `dev-mode/production`, the setters are no-ops.
+For your client-side production builds, you can statically replace `@pygy/dev-mode` with `@pygy/dev-mode/production` in your bundler parameters. That file sets the booleans in a way that lets minifiers statically remove the dev code. In that case, the setters are no-ops.
 
 ```JS
-import {setDevMode, setProduction, devMode, production} from "dev-mode/production"
+import {setDevMode, setProduction, devMode, production} from "@pygy/dev-mode/production"
 
 console.log(devMode, production) // false, true
 
