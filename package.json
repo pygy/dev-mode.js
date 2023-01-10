@@ -1,0 +1,12 @@
+{
+  "name": "dev-mode",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "dev-mode/production micro-module",
+  "main": "dev-mode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pierre-Yves Gérardy",
+  "license": "ISC"
+}
